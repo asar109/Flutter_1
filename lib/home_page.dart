@@ -4,42 +4,16 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
   @override
   Widget build(BuildContext context) {
-    const arrname = [
-      'a',
-      'b',
-      'c',
-      'd',
-      'e',
-      'f',
-      'g',
-      'h',
-      'i',
-      'j',
-      'a',
-      'b',
-      'c',
-      'd',
-      'e',
-      'f',
-      'g',
-      'h',
-      'i',
-      'j'
-    ];
+    const arryname = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('My First Flutter App'),
-        ),
-        body: ListView.separated(
-          itemBuilder: (context, index) {
-            return Text(arrname[index]);
-          },
-          itemCount: arrname.length,
-          separatorBuilder: (context, index) {
-            return Divider(
-              height: 30,
-            );
-          },
-        ));
+      appBar: AppBar(
+        title: const Text('My First Flutter App'),
+      ),
+      body: const CircleAvatar(
+        minRadius: 10.0,
+        maxRadius: 100,
+        child: Text('Hello World'),
+      ),
+    );
   }
 }
